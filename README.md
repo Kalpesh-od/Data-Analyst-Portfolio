@@ -1,2 +1,2 @@
 # Data-Analyst-Portfolio
-Portfolio
+Portfolio for Data Analysis projects
