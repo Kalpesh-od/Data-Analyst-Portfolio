@@ -1,0 +1,2338 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20204.21.0618.0842                               -->
+<workbook original-version='18.1' source-build='2020.4.6 (20204.21.0618.0842)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <_.fcp.SetMembershipControl.true...SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='Twitter_dashboard' path='/workbooks' revision='1.1' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Main_tweets' inline='true' name='federated.0ytjq6g009dhmd18xehnk1m12pxr' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Main_tweets' name='textscan.1qog5ve0r3qts117430xq074rib1'>
+            <connection class='textscan' directory='C:/Users/kalpe/Data Portfolio/Automated Twitter Data collection and Viz' filename='Main_tweets.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1qog5ve0r3qts117430xq074rib1' name='Main_tweets.csv' table='[Main_tweets#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='integer' name='id' ordinal='1' />
+            <column datatype='integer' name='conversation_id' ordinal='2' />
+            <column datatype='real' name='created_at' ordinal='3' />
+            <column datatype='datetime' name='date' ordinal='4' />
+            <column datatype='string' name='tweet' ordinal='5' />
+            <column datatype='string' name='language' ordinal='6' />
+            <column datatype='string' name='hashtags' ordinal='7' />
+            <column datatype='integer' name='user_id' ordinal='8' />
+            <column datatype='integer' name='user_id_str' ordinal='9' />
+            <column datatype='string' name='username' ordinal='10' />
+            <column datatype='integer' name='day' ordinal='11' />
+            <column datatype='integer' name='hour' ordinal='12' />
+            <column datatype='string' name='link' ordinal='13' />
+            <column datatype='string' name='urls' ordinal='14' />
+            <column datatype='string' name='thumbnail' ordinal='15' />
+            <column datatype='integer' name='nlikes' ordinal='16' />
+            <column datatype='integer' name='nreplies' ordinal='17' />
+            <column datatype='integer' name='nretweets' ordinal='18' />
+            <column datatype='string' name='reply_to' ordinal='19' />
+            <column datatype='integer' name='replied' ordinal='20' />
+            <column datatype='string' name='cleaned_text' ordinal='21' />
+            <column datatype='real' name='Subjectivity' ordinal='22' />
+            <column datatype='real' name='Polarity' ordinal='23' />
+            <column datatype='string' name='Analysis_Polarity' ordinal='24' />
+            <column datatype='string' name='Analysis_Subjectivity' ordinal='25' />
+            <column datatype='integer' name='replied 1' ordinal='26' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.1qog5ve0r3qts117430xq074rib1' name='Main_tweets.csv' table='[Main_tweets#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='integer' name='id' ordinal='1' />
+            <column datatype='integer' name='conversation_id' ordinal='2' />
+            <column datatype='real' name='created_at' ordinal='3' />
+            <column datatype='datetime' name='date' ordinal='4' />
+            <column datatype='string' name='tweet' ordinal='5' />
+            <column datatype='string' name='language' ordinal='6' />
+            <column datatype='string' name='hashtags' ordinal='7' />
+            <column datatype='integer' name='user_id' ordinal='8' />
+            <column datatype='integer' name='user_id_str' ordinal='9' />
+            <column datatype='string' name='username' ordinal='10' />
+            <column datatype='integer' name='day' ordinal='11' />
+            <column datatype='integer' name='hour' ordinal='12' />
+            <column datatype='string' name='link' ordinal='13' />
+            <column datatype='string' name='urls' ordinal='14' />
+            <column datatype='string' name='thumbnail' ordinal='15' />
+            <column datatype='integer' name='nlikes' ordinal='16' />
+            <column datatype='integer' name='nreplies' ordinal='17' />
+            <column datatype='integer' name='nretweets' ordinal='18' />
+            <column datatype='string' name='reply_to' ordinal='19' />
+            <column datatype='integer' name='replied' ordinal='20' />
+            <column datatype='string' name='cleaned_text' ordinal='21' />
+            <column datatype='real' name='Subjectivity' ordinal='22' />
+            <column datatype='real' name='Polarity' ordinal='23' />
+            <column datatype='string' name='Analysis_Polarity' ordinal='24' />
+            <column datatype='string' name='Analysis_Subjectivity' ordinal='25' />
+            <column datatype='integer' name='replied 1' ordinal='26' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_CA&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>conversation_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[conversation_id]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>conversation_id</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>created_at</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[created_at]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>created_at</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tweet</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tweet]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>tweet</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>language</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[language]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>language</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hashtags</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[hashtags]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>hashtags</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[user_id]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>user_id</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_id_str</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[user_id_str]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>user_id_str</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>username</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[username]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>username</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[day]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>day</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hour</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[hour]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>hour</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>link</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[link]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>link</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>urls</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[urls]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>urls</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>thumbnail</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[thumbnail]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>thumbnail</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nlikes</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[nlikes]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>nlikes</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nreplies</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[nreplies]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>nreplies</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nretweets</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[nretweets]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>nretweets</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>reply_to</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[reply_to]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>reply_to</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>replied</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[replied]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>replied</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cleaned_text</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cleaned_text]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>cleaned_text</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Subjectivity</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Subjectivity]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>Subjectivity</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Polarity</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Polarity]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>Polarity</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Analysis_Polarity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Analysis_Polarity]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>Analysis_Polarity</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Analysis_Subjectivity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Analysis_Subjectivity]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>Analysis_Subjectivity</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>replied 1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[replied 1]</local-name>
+            <parent-name>[Main_tweets.csv]</parent-name>
+            <remote-alias>replied 1</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Total posts' datatype='integer' name='[Calculation_6021594244888412161]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [replied]= 1 THEN -1 else 1 END' />
+      </column>
+      <column caption='Total Engagement' datatype='integer' name='[Calculation_6021594244894208002]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[nlikes]+[nretweets]+[nreplies]' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='Main_tweets.csv' datatype='table' name='[__tableau_internal_object_id__].[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]' role='measure' type='quantitative' />
+      <column caption='Conversation Id' datatype='integer' name='[conversation_id]' role='dimension' type='ordinal' />
+      <column caption='Created At' datatype='real' name='[created_at]' role='measure' type='quantitative' />
+      <column caption='Date' datatype='datetime' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Day' datatype='integer' name='[day]' role='dimension' type='ordinal'>
+        <aliases>
+          <alias key='1' value='Monday' />
+          <alias key='2' value='Tuesday' />
+          <alias key='3' value='Wednesday' />
+          <alias key='4' value='Thursday' />
+          <alias key='5' value='Friday' />
+          <alias key='6' value='Saturday' />
+          <alias key='7' value='Sunday' />
+        </aliases>
+      </column>
+      <column caption='Hashtags' datatype='string' name='[hashtags]' role='dimension' type='nominal' />
+      <column caption='Hour' datatype='integer' name='[hour]' role='measure' type='quantitative' />
+      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column caption='Language' datatype='string' name='[language]' role='dimension' type='nominal' />
+      <column caption='Link' datatype='string' name='[link]' role='dimension' type='nominal' />
+      <column caption='Nlikes' datatype='integer' name='[nlikes]' role='measure' type='quantitative' />
+      <column caption='Nreplies' datatype='integer' name='[nreplies]' role='measure' type='quantitative' />
+      <column caption='Nretweets' datatype='integer' name='[nretweets]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[replied]' role='measure' type='quantitative' />
+      <column caption='Thumbnail' datatype='string' name='[thumbnail]' role='dimension' type='nominal' />
+      <column caption='Tweet' datatype='string' name='[tweet]' role='dimension' type='nominal' />
+      <column caption='Urls' datatype='string' name='[urls]' role='dimension' type='nominal' />
+      <column caption='User Id' datatype='integer' name='[user_id]' role='dimension' type='ordinal' />
+      <column caption='User Id Str' datatype='integer' name='[user_id_str]' role='measure' type='quantitative' />
+      <column caption='Username' datatype='string' name='[username]' role='dimension' type='nominal' />
+      <column-instance column='[__tableau_internal_object_id__].[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[nreplies]' derivation='Avg' name='[avg:nreplies:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[date]' derivation='Month' name='[mn:date:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[nreplies]' derivation='Sum' name='[sum:nreplies:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[replied]' derivation='Sum' name='[sum:replied:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+      <group caption='Action (YEAR(Date),MONTH(Date))' hidden='true' name='[Action (YEAR(Date),MONTH(Date))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[yr:date:ok]' />
+          <groupfilter function='level-members' level='[mn:date:ok]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/kalpe/OneDrive/Documents/My Tableau Repository/Datasources/Main_tweets.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='07/25/2021 10:30:13 PM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='Main_tweets' increment-value='%null%' refresh-type='create' rows-inserted='568' timestamp-start='2021-07-25 22:30:13.487' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>568</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>id</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>conversation_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[conversation_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>conversation_id</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>created_at</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[created_at]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>created_at</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>388</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>550</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tweet</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[tweet]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>tweet</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>556</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>language</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[language]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>language</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>hashtags</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[hashtags]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>hashtags</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>174</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>user_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[user_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>user_id</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>user_id_str</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[user_id_str]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>user_id_str</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>username</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[username]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>username</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>day</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[day]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>day</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>hour</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[hour]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>hour</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>link</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[link]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>link</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>568</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>urls</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[urls]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>urls</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>315</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>thumbnail</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[thumbnail]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>thumbnail</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>81</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>nlikes</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[nlikes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>nlikes</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>nreplies</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[nreplies]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>nreplies</remote-alias>
+              <ordinal>17</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>nretweets</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[nretweets]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>nretweets</remote-alias>
+              <ordinal>18</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>reply_to</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[reply_to]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>reply_to</remote-alias>
+              <ordinal>19</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>22</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>replied</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[replied]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>replied</remote-alias>
+              <ordinal>20</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cleaned_text</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[cleaned_text]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cleaned_text</remote-alias>
+              <ordinal>21</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>546</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Subjectivity</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Subjectivity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Subjectivity</remote-alias>
+              <ordinal>22</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>107</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Polarity</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Polarity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Polarity</remote-alias>
+              <ordinal>23</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>121</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Analysis_Polarity</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Analysis_Polarity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Analysis_Polarity</remote-alias>
+              <ordinal>24</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Analysis_Subjectivity</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Analysis_Subjectivity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Analysis_Subjectivity</remote-alias>
+              <ordinal>25</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>replied 1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[replied 1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>replied 1</remote-alias>
+              <ordinal>26</ordinal>
+              <family>Main_tweets.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0ytjq6g009dhmd18xehnk1m12pxr].[avg:nreplies:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0ytjq6g009dhmd18xehnk1m12pxr].[sum:replied:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0ytjq6g009dhmd18xehnk1m12pxr].[__tableau_internal_object_id__].[cnt:Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0ytjq6g009dhmd18xehnk1m12pxr].[sum:nreplies:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Main_tweets.csv' id='Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83'>
+            <properties context=''>
+              <relation connection='textscan.1qog5ve0r3qts117430xq074rib1' name='Main_tweets.csv' table='[Main_tweets#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='integer' name='id' ordinal='1' />
+                  <column datatype='integer' name='conversation_id' ordinal='2' />
+                  <column datatype='real' name='created_at' ordinal='3' />
+                  <column datatype='datetime' name='date' ordinal='4' />
+                  <column datatype='string' name='tweet' ordinal='5' />
+                  <column datatype='string' name='language' ordinal='6' />
+                  <column datatype='string' name='hashtags' ordinal='7' />
+                  <column datatype='integer' name='user_id' ordinal='8' />
+                  <column datatype='integer' name='user_id_str' ordinal='9' />
+                  <column datatype='string' name='username' ordinal='10' />
+                  <column datatype='integer' name='day' ordinal='11' />
+                  <column datatype='integer' name='hour' ordinal='12' />
+                  <column datatype='string' name='link' ordinal='13' />
+                  <column datatype='string' name='urls' ordinal='14' />
+                  <column datatype='string' name='thumbnail' ordinal='15' />
+                  <column datatype='integer' name='nlikes' ordinal='16' />
+                  <column datatype='integer' name='nreplies' ordinal='17' />
+                  <column datatype='integer' name='nretweets' ordinal='18' />
+                  <column datatype='string' name='reply_to' ordinal='19' />
+                  <column datatype='integer' name='replied' ordinal='20' />
+                  <column datatype='string' name='cleaned_text' ordinal='21' />
+                  <column datatype='real' name='Subjectivity' ordinal='22' />
+                  <column datatype='real' name='Polarity' ordinal='23' />
+                  <column datatype='string' name='Analysis_Polarity' ordinal='24' />
+                  <column datatype='string' name='Analysis_Subjectivity' ordinal='25' />
+                  <column datatype='integer' name='replied 1' ordinal='26' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <shared-views>
+    <shared-view name='federated.0ytjq6g009dhmd18xehnk1m12pxr'>
+      <datasources>
+        <datasource caption='Main_tweets' name='federated.0ytjq6g009dhmd18xehnk1m12pxr' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0ytjq6g009dhmd18xehnk1m12pxr'>
+        <column caption='Date' datatype='datetime' name='[date]' role='dimension' type='ordinal' />
+        <column-instance column='[date]' derivation='Month' name='[mn:date:ok]' pivot='key' type='ordinal' />
+        <column-instance column='[date]' derivation='None' name='[none:date:qk]' pivot='key' type='quantitative' />
+        <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[mn:date:ok]'>
+        <groupfilter function='level-members' level='[mn:date:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+        <target field='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[mn:date:ok]' />
+      </filter>
+      <filter class='quantitative' column='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:date:qk]' included-values='in-range'>
+        <min>#2012-11-16 00:00:00#</min>
+        <max>#2021-07-20 00:00:00#</max>
+      </filter>
+      <filter class='categorical' column='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[yr:date:ok]'>
+        <groupfilter function='member' level='[yr:date:ok]' member='2021' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+        <target field='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[yr:date:ok]' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Overall' type='sheet' worksheet='Sheet 8' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Overall' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='#of tweets by hour'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>When do i tweet the most?</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Main_tweets' name='federated.0ytjq6g009dhmd18xehnk1m12pxr' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ytjq6g009dhmd18xehnk1m12pxr'>
+            <_.fcp.ObjectModelTableType.false...column caption='Main_tweets.csv' datatype='integer' name='[__tableau_internal_object_id__].[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]' role='measure' type='quantitative' />
+            <column caption='Total Engagement' datatype='integer' name='[Calculation_6021594244894208002]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[nlikes]+[nretweets]+[nreplies]' />
+            </column>
+            <_.fcp.ObjectModelTableType.true...column caption='Main_tweets.csv' datatype='table' name='[__tableau_internal_object_id__].[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83:qk]' pivot='key' type='quantitative' />
+            <column caption='Date' datatype='datetime' name='[date]' role='dimension' type='ordinal' />
+            <column caption='Hour' datatype='integer' name='[hour]' role='measure' type='quantitative' />
+            <column-instance column='[date]' derivation='Month' name='[mn:date:ok]' pivot='key' type='ordinal' />
+            <column caption='Nlikes' datatype='integer' name='[nlikes]' role='measure' type='quantitative' />
+            <column-instance column='[date]' derivation='None' name='[none:date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[hour]' derivation='None' name='[none:hour:qk]' pivot='key' type='quantitative' />
+            <column caption='Nreplies' datatype='integer' name='[nreplies]' role='measure' type='quantitative' />
+            <column caption='Nretweets' datatype='integer' name='[nretweets]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_6021594244894208002]' derivation='Sum' name='[sum:Calculation_6021594244894208002:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[Action (YEAR(Date),MONTH(Date))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[yr:date:ok]' />
+              <groupfilter function='level-members' level='[mn:date:ok]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[Action (YEAR(Date),MONTH(Date))]</column>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[yr:date:ok]</column>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[mn:date:ok]</column>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:date:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:hour:qk]' field-type='quantitative' max='24' min='0' range-type='fixed' scope='cols' type='space' />
+            <format attr='title' class='0' field='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[__tableau_internal_object_id__].[cnt:Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83:qk]' scope='rows' value='# of Tweets' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[sum:Calculation_6021594244894208002:qk]' palette='orange_blue_diverging_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[sum:Calculation_6021594244894208002:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[__tableau_internal_object_id__].[cnt:Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83:qk]</rows>
+        <cols>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:hour:qk]</cols>
+      </table>
+      <simple-id uuid='{63786B4F-29B9-40E8-8C2B-52C4550BDD10}' />
+    </worksheet>
+    <worksheet name='Pol Vs Sub'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Polarity vs Subjectivity</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Main_tweets' name='federated.0ytjq6g009dhmd18xehnk1m12pxr' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ytjq6g009dhmd18xehnk1m12pxr'>
+            <column datatype='real' name='[Polarity]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Subjectivity]' role='measure' type='quantitative' />
+            <column-instance column='[tweet]' derivation='Attribute' name='[attr:tweet:nk]' pivot='key' type='nominal' />
+            <column caption='Date' datatype='datetime' name='[date]' role='dimension' type='ordinal' />
+            <column-instance column='[date]' derivation='Month' name='[mn:date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[date]' derivation='None' name='[none:date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Polarity]' derivation='Sum' name='[sum:Polarity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Subjectivity]' derivation='Sum' name='[sum:Subjectivity:qk]' pivot='key' type='quantitative' />
+            <column caption='Tweet' datatype='string' name='[tweet]' role='dimension' type='nominal' />
+            <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[Action (YEAR(Date),MONTH(Date))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[yr:date:ok]' />
+              <groupfilter function='level-members' level='[mn:date:ok]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[Action (YEAR(Date),MONTH(Date))]</column>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[yr:date:ok]</column>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[mn:date:ok]</column>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:date:qk]</column>
+          </slices>
+          <aggregation value='false' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[sum:Polarity:qk]' palette='red_green_diverging_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[sum:Polarity:qk]' />
+              <tooltip column='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[attr:tweet:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true'>This shows how emotional and how subjective my tweet is.</run>
+                <run>Æ&#10;&#10;</run>
+                <run fontcolor='#787878'>Tweet:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0ytjq6g009dhmd18xehnk1m12pxr].[attr:tweet:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Polarity:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0ytjq6g009dhmd18xehnk1m12pxr].[sum:Polarity:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Subjectivity:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0ytjq6g009dhmd18xehnk1m12pxr].[sum:Subjectivity:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[sum:Subjectivity:qk]</rows>
+        <cols>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[sum:Polarity:qk]</cols>
+      </table>
+      <simple-id uuid='{92942DE8-5489-4AEC-A0F2-B4108566439E}' />
+    </worksheet>
+    <worksheet name='Retweets'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Main_tweets' name='federated.0ytjq6g009dhmd18xehnk1m12pxr' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ytjq6g009dhmd18xehnk1m12pxr'>
+            <column caption='Date' datatype='datetime' name='[date]' role='dimension' type='ordinal' />
+            <column-instance column='[date]' derivation='Month' name='[mn:date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[date]' derivation='None' name='[none:date:qk]' pivot='key' type='quantitative' />
+            <column caption='Nretweets' datatype='integer' name='[nretweets]' role='measure' type='quantitative' />
+            <column-instance column='[nretweets]' derivation='Sum' name='[sum:nretweets:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[Action (YEAR(Date),MONTH(Date))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[yr:date:ok]' />
+              <groupfilter function='level-members' level='[mn:date:ok]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[Action (YEAR(Date),MONTH(Date))]</column>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[yr:date:ok]</column>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[mn:date:ok]</column>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:date:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[sum:nretweets:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontcolor='#75a1c7' fontname='Tableau Semibold' fontsize='14'><![CDATA[<[federated.0ytjq6g009dhmd18xehnk1m12pxr].[sum:nretweets:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontsize='14'> Retweets</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{A795B51B-9F18-47A6-BCF8-A11418DE1ADA}' />
+    </worksheet>
+    <worksheet name='Sheet 8'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Main_tweets' name='federated.0ytjq6g009dhmd18xehnk1m12pxr' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ytjq6g009dhmd18xehnk1m12pxr'>
+            <_.fcp.ObjectModelTableType.false...column caption='Main_tweets.csv' datatype='integer' name='[__tableau_internal_object_id__].[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]' role='measure' type='quantitative' />
+            <column caption='Total Engagement' datatype='integer' name='[Calculation_6021594244894208002]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[nlikes]+[nretweets]+[nreplies]' />
+            </column>
+            <_.fcp.ObjectModelTableType.true...column caption='Main_tweets.csv' datatype='table' name='[__tableau_internal_object_id__].[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83:qk]' pivot='key' type='quantitative' />
+            <column caption='Date' datatype='datetime' name='[date]' role='dimension' type='ordinal' />
+            <column-instance column='[date]' derivation='Month' name='[mn:date:ok]' pivot='key' type='ordinal' />
+            <column caption='Nlikes' datatype='integer' name='[nlikes]' role='measure' type='quantitative' />
+            <column-instance column='[date]' derivation='None' name='[none:date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[tweet]' derivation='None' name='[none:tweet:nk]' pivot='key' type='nominal' />
+            <column caption='Nreplies' datatype='integer' name='[nreplies]' role='measure' type='quantitative' />
+            <column caption='Nretweets' datatype='integer' name='[nretweets]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_6021594244894208002]' derivation='Sum' name='[sum:Calculation_6021594244894208002:qk]' pivot='key' type='quantitative' />
+            <column caption='Tweet' datatype='string' name='[tweet]' role='dimension' type='nominal' />
+            <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:tweet:nk]'>
+            <groupfilter function='level-members' level='[none:tweet:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:date:qk]</column>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:tweet:nk]</column>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[mn:date:ok]</column>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[yr:date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='width' field='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[__tableau_internal_object_id__].[cnt:Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83:qk]' value='68' />
+            <format attr='title' class='0' field='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[__tableau_internal_object_id__].[cnt:Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83:qk]' scope='rows' value='# of tweets' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[mn:date:ok]' value='19' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[sum:Calculation_6021594244894208002:qk]' palette='orange_blue_diverging_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:date:qk]' value='Date'>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontsize='12'>Date</run>
+              </formatted-text>
+            </format>
+            <format attr='title' field='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[yr:date:ok]' value='Year '>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontsize='12'>Year </run>
+              </formatted-text>
+            </format>
+            <format attr='title' field='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[mn:date:ok]' value='Month '>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontsize='12'>Month </run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[sum:Calculation_6021594244894208002:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[__tableau_internal_object_id__].[cnt:Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83:qk]</rows>
+        <cols>([federated.0ytjq6g009dhmd18xehnk1m12pxr].[yr:date:ok] / [federated.0ytjq6g009dhmd18xehnk1m12pxr].[mn:date:ok])</cols>
+      </table>
+      <simple-id uuid='{04C3A6D7-F93D-4D65-A139-1A07A1F158A0}' />
+    </worksheet>
+    <worksheet name='Total Posts'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Main_tweets' name='federated.0ytjq6g009dhmd18xehnk1m12pxr' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ytjq6g009dhmd18xehnk1m12pxr'>
+            <column caption='Total posts' datatype='integer' name='[Calculation_6021594244888412161]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [replied]= 1 THEN -1 else 1 END' />
+            </column>
+            <column caption='Date' datatype='datetime' name='[date]' role='dimension' type='ordinal' />
+            <column-instance column='[date]' derivation='Month' name='[mn:date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[date]' derivation='None' name='[none:date:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[replied]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_6021594244888412161]' derivation='Sum' name='[sum:Calculation_6021594244888412161:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[Action (YEAR(Date),MONTH(Date))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[yr:date:ok]' />
+              <groupfilter function='level-members' level='[mn:date:ok]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[Action (YEAR(Date),MONTH(Date))]</column>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[yr:date:ok]</column>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[mn:date:ok]</column>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:date:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[sum:Calculation_6021594244888412161:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontcolor='#75a1c7' fontname='Tableau Semibold' fontsize='14'><![CDATA[<[federated.0ytjq6g009dhmd18xehnk1m12pxr].[sum:Calculation_6021594244888412161:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontsize='14'>Total Posts</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='wrap' value='auto' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{7B9B30C3-55EE-4794-81BF-6399B43B9E43}' />
+    </worksheet>
+    <worksheet name='Total Tweets'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Main_tweets' name='federated.0ytjq6g009dhmd18xehnk1m12pxr' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ytjq6g009dhmd18xehnk1m12pxr'>
+            <_.fcp.ObjectModelTableType.true...column caption='Main_tweets.csv' datatype='table' name='[__tableau_internal_object_id__].[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83:qk]' pivot='key' type='quantitative' />
+            <column caption='Date' datatype='datetime' name='[date]' role='dimension' type='ordinal' />
+            <column-instance column='[date]' derivation='Month' name='[mn:date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[date]' derivation='None' name='[none:date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+            <_.fcp.ObjectModelTableType.false...column caption='Main_tweets.csv' datatype='integer' name='[__tableau_internal_object_id__].[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[Action (YEAR(Date),MONTH(Date))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[yr:date:ok]' />
+              <groupfilter function='level-members' level='[mn:date:ok]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[Action (YEAR(Date),MONTH(Date))]</column>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[yr:date:ok]</column>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[mn:date:ok]</column>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:date:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='20' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[__tableau_internal_object_id__].[cnt:Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontcolor='#75a1c7' fontname='Tableau Semibold' fontsize='14'><![CDATA[<[federated.0ytjq6g009dhmd18xehnk1m12pxr].[__tableau_internal_object_id__].[cnt:Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontsize='14'>Total Tweets</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='wrap' value='auto' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{98813B32-3103-44D2-BFB4-981708389529}' />
+    </worksheet>
+    <worksheet name='Total likes'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Main_tweets' name='federated.0ytjq6g009dhmd18xehnk1m12pxr' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ytjq6g009dhmd18xehnk1m12pxr'>
+            <column caption='Date' datatype='datetime' name='[date]' role='dimension' type='ordinal' />
+            <column-instance column='[date]' derivation='Month' name='[mn:date:ok]' pivot='key' type='ordinal' />
+            <column caption='Nlikes' datatype='integer' name='[nlikes]' role='measure' type='quantitative' />
+            <column-instance column='[date]' derivation='None' name='[none:date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[nlikes]' derivation='Sum' name='[sum:nlikes:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[Action (YEAR(Date),MONTH(Date))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[yr:date:ok]' />
+              <groupfilter function='level-members' level='[mn:date:ok]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[Action (YEAR(Date),MONTH(Date))]</column>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[yr:date:ok]</column>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[mn:date:ok]</column>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:date:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[sum:nlikes:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontcolor='#75a1c7' fontname='Tableau Semibold' fontsize='14'><![CDATA[<[federated.0ytjq6g009dhmd18xehnk1m12pxr].[sum:nlikes:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontsize='14'>Total Likes</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{EE427200-E10C-4BE9-B0BC-ED807F405437}' />
+    </worksheet>
+    <worksheet name='Weekly Engagement'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Main_tweets' name='federated.0ytjq6g009dhmd18xehnk1m12pxr' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ytjq6g009dhmd18xehnk1m12pxr'>
+            <_.fcp.ObjectModelTableType.false...column caption='Main_tweets.csv' datatype='integer' name='[__tableau_internal_object_id__].[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]' role='measure' type='quantitative' />
+            <column caption='Total Engagement' datatype='integer' name='[Calculation_6021594244894208002]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[nlikes]+[nretweets]+[nreplies]' />
+            </column>
+            <_.fcp.ObjectModelTableType.true...column caption='Main_tweets.csv' datatype='table' name='[__tableau_internal_object_id__].[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_6021594244894208002]' derivation='Avg' name='[avg:Calculation_6021594244894208002:qk]' pivot='key' type='quantitative' />
+            <column caption='Date' datatype='datetime' name='[date]' role='dimension' type='ordinal' />
+            <column caption='Day' datatype='integer' name='[day]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='1' value='Monday' />
+                <alias key='2' value='Tuesday' />
+                <alias key='3' value='Wednesday' />
+                <alias key='4' value='Thursday' />
+                <alias key='5' value='Friday' />
+                <alias key='6' value='Saturday' />
+                <alias key='7' value='Sunday' />
+              </aliases>
+            </column>
+            <column-instance column='[date]' derivation='Month' name='[mn:date:ok]' pivot='key' type='ordinal' />
+            <column caption='Nlikes' datatype='integer' name='[nlikes]' role='measure' type='quantitative' />
+            <column-instance column='[date]' derivation='None' name='[none:date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[day]' derivation='None' name='[none:day:ok]' pivot='key' type='ordinal' />
+            <column caption='Nreplies' datatype='integer' name='[nreplies]' role='measure' type='quantitative' />
+            <column caption='Nretweets' datatype='integer' name='[nretweets]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_6021594244894208002]' derivation='Sum' name='[sum:Calculation_6021594244894208002:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Weekday' name='[wd:date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[Action (YEAR(Date),MONTH(Date))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[yr:date:ok]' />
+              <groupfilter function='level-members' level='[mn:date:ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:day:ok]'>
+            <groupfilter function='level-members' level='[none:day:ok]' />
+          </filter>
+          <filter class='categorical' column='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[wd:date:ok]'>
+            <groupfilter function='level-members' level='[wd:date:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[yr:date:ok]</column>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[mn:date:ok]</column>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[wd:date:ok]</column>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[Action (YEAR(Date),MONTH(Date))]</column>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:date:qk]</column>
+            <column>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:day:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' id='refline0' value='4' />
+            <format attr='background-color' id='refline0' value='#ffffff' />
+            <format attr='stroke-color' id='refline0' value='#555555' />
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:day:ok]' value='Day'>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontsize='12'>Day</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <tooltip column='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[__tableau_internal_object_id__].[cnt:Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83:qk]' />
+              <tooltip column='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[sum:Calculation_6021594244894208002:qk]' />
+            </encodings>
+            <reference-line axis-column='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[avg:Calculation_6021594244894208002:qk]' enable-instant-analytics='true' formula='average' id='refline0' label='Average:' label-type='custom' probability='95' scope='per-table' value-column='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[avg:Calculation_6021594244894208002:qk]' z-order='1' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Day:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:day:ok]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Total Tweets:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0ytjq6g009dhmd18xehnk1m12pxr].[__tableau_internal_object_id__].[cnt:Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg Engagement:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0ytjq6g009dhmd18xehnk1m12pxr].[avg:Calculation_6021594244894208002:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Total Engagement:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0ytjq6g009dhmd18xehnk1m12pxr].[sum:Calculation_6021594244894208002:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#a0cbe8' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[avg:Calculation_6021594244894208002:qk]</rows>
+        <cols>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:day:ok]</cols>
+      </table>
+      <simple-id uuid='{DA7FD9FC-8CD0-4FE2-9A6A-B25929BBC27A}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Overall'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#ffffff' />
+        </style-rule>
+      </style>
+      <size maxheight='1200' maxwidth='1400' minheight='1200' minwidth='1400' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='Main_tweets' name='federated.0ytjq6g009dhmd18xehnk1m12pxr' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0ytjq6g009dhmd18xehnk1m12pxr'>
+        <column caption='Date' datatype='datetime' name='[date]' role='dimension' type='ordinal' />
+        <column caption='Day' datatype='integer' name='[day]' role='dimension' type='ordinal'>
+          <aliases>
+            <alias key='1' value='Monday' />
+            <alias key='2' value='Tuesday' />
+            <alias key='3' value='Wednesday' />
+            <alias key='4' value='Thursday' />
+            <alias key='5' value='Friday' />
+            <alias key='6' value='Saturday' />
+            <alias key='7' value='Sunday' />
+          </aliases>
+        </column>
+        <column-instance column='[date]' derivation='Month' name='[mn:date:ok]' pivot='key' type='ordinal' />
+        <column-instance column='[day]' derivation='None' name='[none:day:ok]' pivot='key' type='ordinal' />
+        <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='9083' id='3' name='Total Tweets' show-title='false' w='15143' x='500' y='11167' />
+        <zone h='7833' id='4' name='Total Posts' show-title='false' w='11071' x='14286' y='11833' />
+        <zone h='8083' id='5' name='Total likes' show-title='false' w='11857' x='24857' y='11667' />
+        <zone h='7583' id='6' name='Retweets' show-title='false' w='11214' x='35929' y='12083' />
+        <zone _.fcp.SetMembershipControl.false...type='bitmap' _.fcp.SetMembershipControl.true...type-v2='bitmap' h='23917' id='7' is-scaled='1' param='C:/Users/kalpe/Data Portfolio/Automated Twitter Data collection and Viz/images/Qswtx4nM_400x400.jpg' w='21143' x='77929' y='500' />
+        <zone h='35083' id='8' name='Weekly Engagement' w='45571' x='143' y='20083' />
+        <zone h='22333' id='9' name='#of tweets by hour' w='99571' x='143' y='56500' />
+        <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='7333' id='10' name='#of tweets by hour' pane-specification-id='0' param='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[sum:Calculation_6021594244894208002:qk]' w='10000' x='89429' y='58167' />
+        <zone h='31917' id='11' name='Pol Vs Sub' w='42143' x='57571' y='25000' />
+        <zone h='23917' id='12' name='Sheet 8' show-title='false' w='99857' x='0' y='76167' />
+        <zone _.fcp.SetMembershipControl.false...type='bitmap' _.fcp.SetMembershipControl.true...type-v2='bitmap' h='8583' id='13' is-centered='0' is-scaled='1' param='C:/Users/kalpe/Data Portfolio/Automated Twitter Data collection and Viz/images/10wmt-superJumbo-v4.jpg' w='10071' x='71' y='0' />
+        <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='5333' id='15' mode='checkdropdown' name='Sheet 8' param='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[mn:date:ok]' values='database' w='13143' x='50214' y='19500' />
+        <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='5167' id='16' mode='checkdropdown' name='Sheet 8' param='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[yr:date:ok]' values='database' w='11429' x='57500' y='13917' />
+        <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='4917' id='17' mode='checkdropdown' name='Weekly Engagement' param='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:day:ok]' values='database' w='12714' x='63571' y='19417' />
+        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' forceUpdate='true' h='8333' id='24' w='35571' x='27714' y='1083'>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='18'>VirenKumar Lathiya</run>
+            <run fontalignment='1'>Æ&#10;</run>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='12'>Social Media Marketer</run>
+            <run fontalignment='1'>Æ&#10;</run>
+            <run bold='true' fontalignment='1' fontsize='12'>Twitter Dashboard</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='2300' minheight='2300' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='32' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98666' id='31' param='vert' w='98858' x='571' y='667'>
+                <zone _.fcp.SetMembershipControl.false...type='bitmap' _.fcp.SetMembershipControl.true...type-v2='bitmap' fixed-size='103' h='8583' id='13' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/kalpe/Data Portfolio/Automated Twitter Data collection and Viz/images/10wmt-superJumbo-v4.jpg' w='10071' x='71' y='0'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='bitmap' _.fcp.SetMembershipControl.true...type-v2='bitmap' fixed-size='280' h='23917' id='7' is-fixed='true' is-scaled='1' param='C:/Users/kalpe/Data Portfolio/Automated Twitter Data collection and Viz/images/Qswtx4nM_400x400.jpg' w='21143' x='77929' y='500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' forceUpdate='true' h='8333' id='24' w='35571' x='27714' y='1083'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='18'>VirenKumar Lathiya</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='12'>Social Media Marketer</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                    <run bold='true' fontalignment='1' fontsize='12'>Twitter Dashboard</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='109' h='9083' id='3' is-fixed='true' name='Total Tweets' show-title='false' w='15143' x='500' y='11167'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='97' h='8083' id='5' is-fixed='true' name='Total likes' show-title='false' w='11857' x='24857' y='11667'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='94' h='7833' id='4' is-fixed='true' name='Total Posts' show-title='false' w='11071' x='14286' y='11833'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='91' h='7583' id='6' is-fixed='true' name='Retweets' show-title='false' w='11214' x='35929' y='12083'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='4917' id='17' mode='checkdropdown' name='Weekly Engagement' param='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:day:ok]' values='database' w='12714' x='63571' y='19417'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='35083' id='8' is-fixed='true' name='Weekly Engagement' w='45571' x='143' y='20083'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='31917' id='11' is-fixed='true' name='Pol Vs Sub' w='42143' x='57571' y='25000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='268' h='22333' id='9' is-fixed='true' name='#of tweets by hour' w='99571' x='143' y='56500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='7333' id='10' name='#of tweets by hour' pane-specification-id='0' param='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[sum:Calculation_6021594244894208002:qk]' w='10000' x='89429' y='58167'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='5333' id='15' mode='checkdropdown' name='Sheet 8' param='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[mn:date:ok]' values='database' w='13143' x='50214' y='19500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='5167' id='16' mode='checkdropdown' name='Sheet 8' param='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[yr:date:ok]' values='database' w='11429' x='57500' y='13917'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='23917' id='12' is-fixed='true' name='Sheet 8' show-title='false' w='99857' x='0' y='76167'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{64343444-59B8-4882-9EDD-54913BB65CA1}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='dashboard' maximized='true' name='Overall'>
+      <viewpoints>
+        <viewpoint name='#of tweets by hour'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Pol Vs Sub'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Retweets'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 8'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total Posts'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total Tweets'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total likes'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Weekly Engagement'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{FEA5A446-3149-41F0-A5CF-C20E566F92CF}' />
+    </window>
+    <window class='worksheet' hidden='true' name='#of tweets by hour'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[sum:Calculation_6021594244894208002:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:hour:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{47F9FFC0-4421-4517-A966-18060A93E848}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Pol Vs Sub'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[sum:Polarity:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:tweet:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{6B7C0066-B997-4DBD-B471-9E3256526073}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Retweets'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{78085551-4422-4255-845B-8B8E96675FBB}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Sheet 8'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:tweet:nk]' type='filter' values='relevant' />
+            <card param='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:date:qk]' show-domain='false' show-null-ctrls='false' show-reldate-picker='true' type='filter' />
+            <card pane-specification-id='3' param='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[sum:Calculation_6021594244894208002:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <selection-collection>
+          <node-selection select-tuples='false'>
+            <oriented-node-reference orientation='vertical'>
+              <node-reference>
+                <axis>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[__tableau_internal_object_id__].[cnt:Main_tweets.csv_3177B2E1FA34476DAD628F0CED7E1C83:qk]</axis>
+              </node-reference>
+              <page-reference />
+            </oriented-node-reference>
+          </node-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:date:ok]</field>
+            <field>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:date:qk]</field>
+            <field>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:tweet:nk]</field>
+            <field>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[sum:Calculation_6021594244894208002:qk]</field>
+            <field>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[yr:date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{A8ED7DCA-E92A-4339-BC6F-28C9A429E0D9}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Total Posts'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{8A09350B-4199-414F-A741-F5A03B98DE6A}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Total Tweets'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:id:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{4FD8EB79-408A-420B-908E-CDE3A3069C47}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Total likes'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{81043E8C-06FD-48A4-B561-C1A831E0E5F9}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Weekly Engagement'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[wd:date:ok]' type='filter' />
+            <card param='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[mn:date:ok]' type='filter' />
+            <card param='[federated.0ytjq6g009dhmd18xehnk1m12pxr].[yr:date:ok]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[mn:date:ok]</field>
+            <field>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[none:day:ok]</field>
+            <field>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[wd:date:ok]</field>
+            <field>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[wk:date:ok]</field>
+            <field>[federated.0ytjq6g009dhmd18xehnk1m12pxr].[yr:date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{DB03D427-67D9-498C-BB59-02C07877E9B0}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Overall' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
